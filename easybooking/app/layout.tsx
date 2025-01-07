@@ -1,33 +1,33 @@
-import type { Metadata } from "next"
+import "../styles/global.css"
 
-export const metadata: Metadata = {
-  title: "Easy Booking",
-  description:
-    "Agendamento simples e eficiente para pequenas empresas, como barbearias, salões e outros serviços.",
-  keywords:
-    "agendamento, fácil, serviços, pequenas empresas, barbearias, salões, gerenciamento, mei",
-  themeColor: "#ffffff",
-  openGraph: {
-    title: "Easy Booking",
-    description: "Agendamento simples e eficiente para pequenas empresas",
-    url: "https://www.seusite.com",
-    siteName: "Easy Booking",
-    images: [
-      {
-        url: "/path/to/your/image.jpg",
-        width: 800,
-        height: 600,
-        alt: "Imagem do serviço de agendamento"
-      }
-    ],
-    type: "website"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Easy Booking",
-    description: "Agendamento simples e eficiente para pequenas empresas"
-  }
-}
+// import type { Metadata } from "next"
+// export const metadata: Metadata = {
+//   title: "Easy Booking",
+//   description:
+//     "Agendamento simples e eficiente para pequenas empresas, como barbearias, salões e outros serviços.",
+//   keywords:
+//     "agendamento, fácil, serviços, pequenas empresas, barbearias, salões, gerenciamento, mei",
+//   openGraph: {
+//     title: "Easy Booking",
+//     description: "Agendamento simples e eficiente para pequenas empresas",
+//     url: "https://www.seusite.com",
+//     siteName: "Easy Booking",
+//     images: [
+//       {
+//         url: "/path/to/your/image.jpg",
+//         width: 800,
+//         height: 600,
+//         alt: "Imagem do serviço de agendamento"
+//       }
+//     ],
+//     type: "website"
+//   },
+//   twitter: {
+//     card: "summary_large_image",
+//     title: "Easy Booking",
+//     description: "Agendamento simples e eficiente para pequenas empresas"
+//   }
+// }
 
 export default function RootLayout({
   children
