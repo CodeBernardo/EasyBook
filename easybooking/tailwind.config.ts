@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss"
 import daisyui from "daisyui"
+import { PluginAPI } from "tailwindcss/types/config"
 
 export type IDaisyUITheme = Record<string, IDaisyUIThemeScheme>
 
@@ -33,7 +34,8 @@ export default {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)"
+        foreground: "var(--foreground)",
+        "logo-primary": "#1C4189"
       }
     }
   },
@@ -84,5 +86,22 @@ export default {
     ]
   },
 
-  plugins: [daisyui]
+  plugins: [
+    daisyui,
+    ({ addComponents }: PluginAPI) => {
+      addComponents({
+        'input[type="number"]::-webkit-outer-spin-button': {
+          '-webkit-appearance': 'none',
+          margin: '0',
+        },
+        'input[type="number"]::-webkit-inner-spin-button': {
+          '-webkit-appearance': 'none',
+          margin: '0',
+        },
+        'input[type="number"]': {
+          '-moz-appearance': 'textfield',
+        },
+      });
+    },
+  ]
 } satisfies Config

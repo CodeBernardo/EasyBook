@@ -1,11 +1,37 @@
-import EBPapper from "./Components/EBPaper/EBPaper";
+"use client"
+
+import { useForm } from "react-hook-form"
+import EBFormField from "./Components/EBFormField/EBFormField"
+import EBPapper from "./Components/EBPaper/EBPaper"
 
 export default function Home() {
+  const { control } = useForm()
   return (
-    <div className="p-5">
-      <EBPapper className="h-20">
-        <p>Xalala</p>
-      </EBPapper>
-    </div>
+    <EBPapper>
+      <EBFormField
+        name="number"
+        inputType="number"
+        control={control}
+        id="2"
+        label="Number"
+        containerClassNames=""
+      />
+      <EBFormField
+        name="text"
+        inputType="text"
+        control={control}
+        id="2"
+        label="Text"
+        containerClassNames=""
+      />
+      <EBFormField
+        name="password"
+        inputType="password"
+        control={control}
+        id="2"
+        label="Password"
+        containerClassNames=""
+      />
+    </EBPapper>
   )
 }

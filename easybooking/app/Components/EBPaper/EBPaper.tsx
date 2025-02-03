@@ -76,7 +76,7 @@ type IEBPaper = {
  * @param {string} [width] - The width of the component. Can be a Tailwind measure or a CSS unit.
  * @param {boolean} [straightBorder] - Removes rounded borders from the component.
  * @param {boolean} [removeShadow] - Removes the shadow from the component.
- * @param {number} [elevation=1] - The elevation level (shadow) of the component, between 0 and 5.
+ * @param {number} [elevation=2] - The elevation level (shadow) of the component, between 0 and 5.
  * @param {string} [containerClasses] - Additional CSS classes for the main container.
  * @param {boolean} [removeAutopadding] - Removes automatic padding from the component.
  * @param {CSSProperties} [styles] - Inline CSS styles.
@@ -122,7 +122,7 @@ const EBPapper = (props: IEBPaper) => {
   ]
   const shadowClass = removeShadow
     ? "shadow-none"
-    : elevationClasses[Math.min(elevation, 5)]
+    : elevationClasses[elevation]
 
   return (
     <section
